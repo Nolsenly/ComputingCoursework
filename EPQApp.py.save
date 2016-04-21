@@ -1,0 +1,25 @@
+
+import pytesseract
+from PIL import Image
+photo = "1kwords.jpeg"
+Imagewords = str(pytesseract.image_to_string(Image.open(photo)))
+print(Imagewords)
+cardname = []
+fobj = open("mtgcardsfile.txt", "r")
+lines = 0
+while lines <2 
+	f2besplit=fobj.read(lines)
+	f2besplit.split(",")
+	cardname.append(f2besplit[0])
+	cardcolour.append(f2besplit[1])
+	cardcost.append(f2besplit[2]fobj = open("ad_lesbiam.txt", "r"))
+
+x = len(cardname)
+n=0
+while (n < x): 
+	if Imagewords == cardname[n] :
+		print("issame")
+		
+	else:
+		print("isdiff")
+	n=n + 1

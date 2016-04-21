@@ -1,0 +1,3 @@
+twelve,u,(2)(u)(u),Draw 2 Cards,sorcery,0,0
+nissa's chosen,g,(g)(g),When this card hits the graveyard it returns to bottom of deck,Creature,2,3
+

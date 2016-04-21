@@ -1,0 +1,32 @@
+import tkinter
+import EPQApp
+
+def popupmsg():
+    popup = tkinter.Tk()
+    popup.title("PhotoAdd")
+    label = tkinter.Label(popup, text=msg)
+    label.pack(side="top", fill="x", pady=10)
+    entry = tkinter.Entry(popup)
+    entry.pack()
+    B1 = tkinter.Button(popup, text="Add", command = lambda: EPQApp.CheckByPicture(entry.get()))
+    B1.pack()
+    popup.mainloop()
+msg = "Write Filename + Extension here:"
+root = tkinter.Tk()
+root.title("EPQApp")
+root.geometry("300x300")
+#root.wm_iconbitmap("epqicon.ico")
+w = tkinter.Label(root, text="Search for a Card by:")
+inptexample = tkinter.Entry(root)
+btnname = tkinter.Button(root, text = "Name", command = lambda: EPQApp.NamSer(inptexample.get()))
+btntype = tkinter.Button(root, text = "type", command = lambda: EPQApp.TypSer(inptexample.get()))
+btncolr = tkinter.Button(root, text = "Colour", command = lambda: EPQApp.ColSer(inptexample.get()))
+psbtn = tkinter.Button(root, text ="add to database by picture", command=popupmsg)
+#, command=popupmsg("Write filename + Extension here.")
+w.pack()
+inptexample.pack()
+btnname.pack()
+btncolr.pack()
+btntype.pack()
+psbtn.pack()
+root.mainloop()
